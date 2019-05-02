@@ -151,6 +151,18 @@ html, body {
 
 nav ul {
   margin-left: 0;
+  padding-left: 0;
+}
+nav ul li {
+  list-style-type: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #5f5f5f;
+}
+nav ul li:hover {
+  color: white;
+  background: #58e1c1;
 }
 
 /*# sourceMappingURL=styles.css.map */

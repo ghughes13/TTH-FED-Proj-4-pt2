@@ -5,4 +5,16 @@
 
 nav ul {
   margin-left: 0;
+  padding-left: 0;
+  li {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: $nav-text;
+    }
+    &:hover {
+      color: white;
+      background: $viking;
+    }
+  }
 }

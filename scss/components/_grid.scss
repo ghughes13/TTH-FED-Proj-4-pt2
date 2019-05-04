@@ -12,13 +12,13 @@
 
   // .grid__row
   &__row {
-    padding: 1em 10px;
-    display: flex;
-    flex-direction: column;
-
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
+    padding: 1em 0;
+    @include flexn {
+      flex-direction: column;
+    }
+    @include desktop {
       flex-direction: row;
+      justify-content: center
     }
   }
 
@@ -33,14 +33,13 @@
       // selector would be .grid__col--1
       &--#{$i} {
 
-        // base styles applied to all grid columns 
+        // base styles applied to all grid columns
         // NOTE: could be converted to a placeholder, along with margin
         // from the  media query
         margin-top: 10px;
         flex-basis: 100%;
 
-        // NOTE: replace with media query mixin if aiming for exceeds
-        @media (min-width: 768px) {
+        @include desktop {
 
           // base stlyes applied to all grid columns
           margin-top: 0;
@@ -58,11 +57,50 @@
   // grid__col + grid__col, targets two sibling columns
   & + & {
 
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
+    @include desktop {
 
       // add grid gutter
       margin-left: 10px;
     }
+  }
+}
+
+%btn-grid {
+  border: none;
+  border-radius: 5px;
+  padding: 15px 10px;
+  font-weight: $heavy-weight;
+  font-size: 18px;
+}
+
+.grid__row > .theme__colors {
+  @extend %btn-grid;
+  text-align: left !important;
+  font-weight: 700;
+  color: $grid-text;
+  font-size: 18px;
+  @include desktop {
+    text-align: center !important;
+  }
+  &.grid__col--12 {
+    background: $washed-green;
+  }
+  &.grid__col--6 {
+    background: $ocean-blue;
+  }
+  &.grid__col--4 {
+    background: $teal;
+  }
+  &.grid__col--3 {
+    background: $violet;
+  }
+  &.grid__col--5 {
+    background: $success;
+  }
+  &.grid__col--7 {
+    background: $pinkish;
+  }
+  &.grid__col--8 {
+    background: $burnt-orange;
   }
 }

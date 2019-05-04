@@ -1,0 +1,26 @@
+.container * {
+  font-family: $main-font;
+}
+
+.headline--primary { /* h1 */
+  color: $viking;
+  padding-left: 15px;
+}
+
+.container p { /* p */
+  line-height:1.5;
+  color: $white-text;
+  font-size: 18px;
+}
+
+.headline--secondary { /* h4 */
+  color: $white-text;
+  font-weight: $light-weight;
+  font-size: 18px;
+}
+
+.link { /* a */
+  color: $default;
+  font-weight: $heavy-weight;
+  text-decoration: none;
+}

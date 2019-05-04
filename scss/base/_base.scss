@@ -1,7 +1,12 @@
-html,body { /*For some reason the html tag only spans across 95% of the screen unless I correct it*/
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden
+html {
+    overflow: auto;
+}
+
+.container { /* Body */
+  padding: 25px;
+  height: 100%;
+  margin: 0px;
+  overflow-x: hidden;
+  max-width: 1224px;
+  margin:auto;
 }

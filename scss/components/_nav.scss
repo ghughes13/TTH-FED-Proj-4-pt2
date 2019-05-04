@@ -3,18 +3,30 @@
     text-align: center;
 }
 
-nav ul {
+.nav {
   margin-left: 0;
   padding-left: 0;
-  li {
+  @include desktop {
+     display: flex;
+     justify-content: center;
+  }
+  .nav__item {
     list-style-type: none;
+    padding: 15px 10px;
+    border-radius: 5px;
+    @include desktop {
+      padding: 15px 30px;
+      text-align: center;
+    }
     a {
       text-decoration: none;
       color: $nav-text;
     }
-    &:hover {
-      color: white;
+  }
+  .nav__item:hover {
       background: $viking;
-    }
+      a {
+        color: white;
+      }
   }
 }
